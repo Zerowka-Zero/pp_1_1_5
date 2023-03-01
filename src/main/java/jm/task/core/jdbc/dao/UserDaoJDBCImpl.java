@@ -22,7 +22,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Connection connection = Util.getConnection()) {
             connection.createStatement().executeUpdate(sqlCommand);
             connection.commit();
-            System.out.println("Таблица созданна ✅");
+            System.out.println("Таблица созданна ✅\n");
         } catch (SQLException ex ) {
             System.out.println("☦️");
             ex.getStackTrace();
@@ -34,7 +34,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Connection connection = Util.getConnection()) {
             connection.createStatement().executeUpdate(sqlCommand);
             connection.commit();
-            System.out.println("Таблица удалена ✅");
+            System.out.println("Таблица удалена ✅\n");
         } catch (SQLException ex) {
             System.out.println("☦️");
             ex.getStackTrace();
@@ -50,7 +50,7 @@ public class UserDaoJDBCImpl implements UserDao {
             ps.setInt(3, age);
             ps.executeUpdate();
             connection.commit();
-            System.out.printf("Юзер с именем %s добавлен в базу ✅", name);
+            System.out.printf("User с именем – %s добавлен в базу данных ✅\n", name);
 
         } catch (SQLException ex ) {
             System.out.println("☦️");
@@ -65,7 +65,7 @@ public class UserDaoJDBCImpl implements UserDao {
             ps.setLong(1, id);
             ps.executeUpdate();
             connection.commit();
-            System.out.printf("Пользователь с id %s удален из базы данных ✅", id);
+            System.out.printf("Пользователь с id %s удален из базы данных ✅\n", id);
         } catch (SQLException ex) {
             System.out.println("☦️");
             ex.getStackTrace();
@@ -96,7 +96,7 @@ public class UserDaoJDBCImpl implements UserDao {
             PreparedStatement ps = connection.prepareStatement(sqlCommand);
             ps.executeUpdate();
             connection.commit();
-            System.out.println("✅");
+            System.out.println("✅\n");
 
         } catch (SQLException ex) {
             System.out.println("☦️");

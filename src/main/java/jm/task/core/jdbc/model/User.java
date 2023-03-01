@@ -61,6 +61,6 @@ public class User {
     }
 
     public String toString() {
-        return String.format("Имя: %s Фамилия: %s Возраст: %s", getName(), getLastName(), getAge());
+        return String.format("Имя: %s Фамилия: %s Возраст: %s\n", getName(), getLastName(), getAge());
     }
 }
